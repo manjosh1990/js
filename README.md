@@ -1,2 +1,2 @@
 # js
-java script projects
+Practice java script projects
