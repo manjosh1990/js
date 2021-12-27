@@ -179,11 +179,7 @@ a:active{
 li{
     margin: 15px 5px;
 }
-.nav-bar{
-    display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-}
+
 @media only screen and (max-width:600px){
     .hero-info{
         max-width: 500px;
@@ -191,5 +187,54 @@ li{
     .hero-img{
         visibility: hidden;
         height: 0px;
+    }
+}
+
+.nav-bar{
+    display: none;
+}
+.hamburger:focus{
+    outline: none;
+}
+.nav-bar.show{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.nav-bar li{
+    background-color: rgb(6,124,185);
+    padding: 5px 30px;
+    border-radius: 5px;
+
+}
+.hamburger{
+    border: 0;
+    background-color: transparent;
+    margin: 15px;
+}
+@media only screen and (min-width:700px){
+    .hamburger{
+        display: none;
+    }
+    .nav-bar{
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .nav-bar li{
+        margin: 0;
+        padding: 10px;
+        background-color: transparent;
+    }
+    .nav-bar.show{
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        font-size: 12px;
+        text-transform: uppercase;
     }
 }
